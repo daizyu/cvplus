@@ -18,7 +18,13 @@
   Mac / Linux  
   ```python3 -m pip install --upgrade pip```  
 
-3. Install CVPlus  
+3. Install CVPlus   
+3-1. From pypi  
+  Windows  
+  ```python -m pip install cvplus```  
+  Mac / Linux  
+  ```python3 -m pip install cvplus```  
+3-2. From github  
   Windows  
   ```python -m pip install git+https://github.com/daizyu/cvplus```  
   Mac / Linux  
