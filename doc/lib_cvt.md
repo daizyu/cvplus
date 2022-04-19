@@ -25,13 +25,7 @@ filepath = r'c:\temp\画像ファイル.jpg'
 img = cvt.imread(filepath) 
 ```
 
-## to_pil  
-Convert from OpenCV Image to Pil Image.  
-``` python
-from cvplus import cvt
-img = cvt.imnew(100,100)
-pil_img = cvt.to_pil(img)
-```
+
 ## from_pil  
 Convert from Pil Image to OpenCV Image.  
 ``` python
