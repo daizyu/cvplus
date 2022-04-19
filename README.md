@@ -33,10 +33,15 @@
 ## Libraries  
 [cvt](./doc/lib_cvt.md "CVT Module")  
 - cvt.imnew  
+Create nwe OpenCV image
 - cvt.imread  
+Read OpenCV image (non-ascii code enable)
 - cvt.imwrite  
+Write OpenCV image (non-ascii code enable)
 - cvt.from_pil  
+Convert image format from PIL image to OpenCV image
 - cvt.to_pil  
+Convert image format from OpenCV image to PIL image
  
 ## Gui Tools
 
