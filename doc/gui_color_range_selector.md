@@ -1,4 +1,4 @@
-# Color range selector
+# Color range selector (for cv2.imRange)
 
 Color range selector is for ```cv2.inRange```.  
 ```inRange``` requires lower range ange upper range.  

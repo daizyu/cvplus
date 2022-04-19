@@ -91,26 +91,26 @@ def imnew(w: int, h: int, d: int = 3, dtype: type = np.uint8) -> cv2.Mat:
 
 def to_pil(img: cv2.Mat) -> Image.Image:
     if img.ndim == 2:
-        return img
-
-    if img.shape[2] == 3:
-        return cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        return Image.fromarray(img)
+    elif img.shape[2] == 3:
+        return Image.fromarray(cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
     elif img.shape[2] == 4:
-        return cv2.cvtColor(img, cv2.COLOR_RGBA2BGRA)
+        return Image.fromarray(cv2.cvtColor(img, cv2.COLOR_RGBA2BGRA))
 
-    raise Exception(f'Incorrect image format shape="{img.shape}"')
+    Exception(f'Incorrect image format shape="{img.shape}"')
 
 
 def from_pil(pil_img: Image.Image) -> cv2.Mat:
-    if pil_img.ndim == 2:
-        return pil_img
+    ary = np.array(pil_img, dtype=np.uint8)
+    if ary.ndim == 2:
+        return ary
 
-    if pil_img.shape[2] == 3:
-        return cv2.cvtColor(pil_img, cv2.COLOR_BGR2RGB)
-    elif pil_img.shape[2] == 4:
-        return cv2.cvtColor(pil_img, cv2.COLOR_BGRA2RGBA)
+    if ary.shape[2] == 3:
+        return cv2.cvtColor(ary, cv2.COLOR_RGB2BGR)
+    elif ary.shape[2] == 4:
+        return cv2.cvtColor(ary, cv2.COLOR_RGBA2BGRA)
 
-    raise Exception(f'Incorrect image format shape="{pil_img.shape}"')
+    raise Exception(f'Incorrect image format shape="{ary.shape}"')
 
 
 def to_html_img_tag(img: cv2.Mat, attributes: dict = {}) -> str:

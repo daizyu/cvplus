@@ -31,63 +31,17 @@
   ```python3 -m pip install git+https://github.com/daizyu/cvplus``` 
 
 ## Libraries  
-1.1 Create new image for OpenCV style  
-```
-from cvplus import cvt
-img = cvt.imnew(100,200) 
-```
-
-1.2 Save image file with non ascii folder name for OpenCV style.  
-```
-from cvplus import cvt
-
-img = cvt.imnew(100,200) 
-filepath = r'c:\temp\画像ファイル.jpg'  
-cvt.imwrite(filepath,img) 
-```
-
-1.3 Open image with non ascii folder name for OpenCV style.  
-```
-from cvplus import cvt
-filepath = r'c:\temp\画像ファイル.jpg'  
-img = cvt.imread(filepath) 
-```
+[cvt](./doc/lib_cvt.md "CVT Module")  
 
 
 ## Gui Tools
 
-[Color range selector](./doc/gui_color_range_selector.md "Color range selector")
+[Color range selector](./doc/gui_color_range_selector.md "Color range selector")  
+
+[Camera capture](./doc/gui_color_range_selector.md "Camera capture")  
 
 
-### Camera capture
+## Cui Tool  
 
-Get picture from camera.  
-
-#### How to use...
-
-Windows  
-```python -m cvplus.gui.camera_capture --output-folder c:\image-folder --camera-id 0```  
-Mac / Linux  
-```python3 -m cvplus.gui.camera_capture --output-folder ~/image-folder --camera-id 0```  
-
-#### Key assignment  
-
-```esc``` : close application  
-```s```   : save image file
-
-#### Recommended option  
-
-```--extention...``` : image file extention (.jpg / .png).
-
-```--cap_prop_...``` : camera option.
-
-## img conv (Command line tool)  
-Windows  
-```
-python -m cvplus.cli.imgconv --input-folder c:\In-Images --output-folder c:\Out-Images --recursive True --fixed-height 100 --extension .jpg
-```  
-Mac / Linux  
-```
-python3 -m cvplus.cli.imgconv --input-folder ~/In-Images --output-folder ~/Out-Images --recursive True --fixed-height 100 --extension .jpg
-``` 
+[Image converter](./doc/cli_img_conv.md "Image converter)
 
