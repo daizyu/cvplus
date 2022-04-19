@@ -32,8 +32,12 @@
 
 ## Libraries  
 [cvt](./doc/lib_cvt.md "CVT Module")  
-
-
+- cvt.imnew  
+- cvt.imread  
+- cvt.imwrite  
+- cvt.from_pil  
+- cvt.to_pil  
+ 
 ## Gui Tools
 
 [Color range selector](./doc/gui_color_range_selector.md "Color range selector")  
@@ -43,5 +47,5 @@
 
 ## Cui Tool  
 
-[Image converter](./doc/cli_img_conv.md "Image converter)
+[Image converter](./doc/cli_img_conv.md "Image converter")
 

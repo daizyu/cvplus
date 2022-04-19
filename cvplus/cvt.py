@@ -129,9 +129,9 @@ def to_html_img_tag(img: cv2.Mat, attributes: dict = {}) -> str:
 
 
 if __name__ == "__main__":
-    import cvplus.cvlibs
+    import cvplus.cvt
 
-    img = cvplus.cvlibs.imnew(200, 100)
+    img = cvplus.cvt.imnew(200, 100)
 
     pil_img = to_pil(img)
 
