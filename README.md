@@ -13,37 +13,40 @@
 2. Upgrade pip  
   **!!!important!!!**  
   When upgrade is not done , the dependented library opencv-python installation nerver finish.  
-  Windows  
+  - Windows  
   ```python -m pip install --upgrade pip```  
-  Mac / Linux  
+  - Mac / Linux  
   ```python3 -m pip install --upgrade pip```  
 
 3. Install CVPlus   
 3-1. From pypi  
-  Windows  
+  - Windows  
   ```python -m pip install cvplus```  
-  Mac / Linux  
+  - Mac / Linux  
   ```python3 -m pip install cvplus```  
 3-2. From github  
-  Windows  
+  - Windows  
   ```python -m pip install git+https://github.com/daizyu/cvplus```  
-  Mac / Linux  
+  - Mac / Linux  
   ```python3 -m pip install git+https://github.com/daizyu/cvplus``` 
 
 ## Libraries  
 [cvt](./doc/lib_cvt.md "CVT Module")  
 - cvt.imnew  
-Create nwe OpenCV image
+Create nwe OpenCV image  
 - cvt.imread  
-Read OpenCV image (non-ascii code enable)
+Read OpenCV image (non-ascii code enable)  
 - cvt.imwrite  
-Write OpenCV image (non-ascii code enable)
+Write OpenCV image (non-ascii code enable)  
 - cvt.from_pil  
-Convert image format from PIL image to OpenCV image
+Convert image format from PIL image to OpenCV image  
 - cvt.to_pil  
-Convert image format from OpenCV image to PIL image
+Convert image format from OpenCV image to PIL image  
 
-[draw](./doc/lib_draw.md "DRAW Module")
+[draw](./doc/lib_draw.md "DRAW Module")  
+- draw.arrow  
+Draw arrow
+
 
 ## Gui Tools
 
