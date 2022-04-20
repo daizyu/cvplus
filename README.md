@@ -42,7 +42,9 @@ Write OpenCV image (non-ascii code enable)
 Convert image format from PIL image to OpenCV image
 - cvt.to_pil  
 Convert image format from OpenCV image to PIL image
- 
+
+[draw](./doc/lib_draw.md "DRAW Module")
+
 ## Gui Tools
 
 [Color range selector](./doc/gui_color_range_selector.md "Color range selector")  
