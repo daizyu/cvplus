@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cvplus"
-version = "0.1.1"
+version = "0.1.2"
 description = "CV Tools"
 authors = ["Daiju Watanabe <11362284+daizyu@users.noreply.github.com>"]
 license = "MIT"
