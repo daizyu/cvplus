@@ -30,6 +30,7 @@
   - Mac / Linux  
   ```python3 -m pip install git+https://github.com/daizyu/cvplus``` 
 
+
 ## Libraries  
 [cvt](./doc/lib_cvt.md "CVT Module")  
 - cvt.imnew  
@@ -42,20 +43,28 @@ Write OpenCV image (non-ascii code enable)
 Convert image format from PIL image to OpenCV image  
 - cvt.to_pil  
 Convert image format from OpenCV image to PIL image  
+- cvt.to_html_img_tag  
+Convert image to HTML img tag (Base64 encoding)  
 
 [draw](./doc/lib_draw.md "DRAW Module")  
 - draw.arrow  
 Draw arrow
 
+[shape](./doc/lib_shape.md "Shape Module")  
+- shape.crop_simple_affin  
+Cropping rect by 4 points using affine transformation.  
+
+[display](/doc/lib_display.md "Display")  
+- display.imshow_on_jupyter  
+Display Open CV image on the jupyter  
 
 ## Gui Tools
 
 [Color range selector](./doc/gui_color_range_selector.md "Color range selector")  
 
-[Camera capture](./doc/gui_color_range_selector.md "Camera capture")  
+[Camera capture](./doc/gui_camera_capture.md "Camera capture")  
 
 
 ## Cui Tool  
 
 [Image converter](./doc/cli_img_conv.md "Image converter")
-

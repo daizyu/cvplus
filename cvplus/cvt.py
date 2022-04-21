@@ -90,6 +90,19 @@ def imnew(w: int, h: int, d: int = 3, dtype: type = np.uint8) -> cv2.Mat:
 
 
 def to_pil(img: cv2.Mat) -> Image.Image:
+    """
+    Convert OpenCV image to PIL image
+
+    Parameters
+    ----------
+    img : cv2.Mat
+        Open CV image
+
+    Returns
+    -------
+    pil_img : Image
+        PIL image
+    """
     if img.ndim == 2:
         return Image.fromarray(img)
     elif img.shape[2] == 3:
@@ -101,6 +114,19 @@ def to_pil(img: cv2.Mat) -> Image.Image:
 
 
 def from_pil(pil_img: Image.Image) -> cv2.Mat:
+    """
+    Convert PIL image to OpenCV image
+
+    Parameters
+    ----------
+    pil_img : Image
+        Pill image
+
+    Returns
+    -------
+    img : cv2.Mat
+        Open CV image
+    """
     ary = np.array(pil_img, dtype=np.uint8)
     if ary.ndim == 2:
         return ary
@@ -114,6 +140,19 @@ def from_pil(pil_img: Image.Image) -> cv2.Mat:
 
 
 def to_html_img_tag(img: cv2.Mat, attributes: dict = {}) -> str:
+    """
+    Open CV image to HTML image tag
+
+    Parameters
+    ----------
+    img : cv2.Mat
+        Open CV image
+    attributes: dict
+        Attributes
+
+    Returns
+    -------
+    """
     attributes_str = ""
     for key, val in attributes.items():
         if type(val) is str:
@@ -137,6 +176,9 @@ if __name__ == "__main__":
 
     img2 = from_pil(pil_img)
 
-    img_tag = to_html_img_tag(img2, {"alt": "test code", "title": "Test"})
-    # with codecs.open(r"test.html", "w+", "utf8") as f:
+    img = cvplus.cvt.imread("test.jpg")
+    img_tag = to_html_img_tag(img, {"alt": "test alt", "title": "test title"})
+
+    # import codecs
+    # with codecs.open("test.html", "w+", "utf8") as f:
     #    f.write(f"<html>{img_tag}</html>")

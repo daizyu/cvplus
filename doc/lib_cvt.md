@@ -39,9 +39,28 @@ cvt.imwrite('2.png', img)
 ## to_pil  
 Convert to PulImage from OpenCV Image.  
 ``` python
-from PIL import Image                                            
+from PIL
 from cvplus import cvt
 pil_img = Image.open('1.png')
 img = cvt.from_pil(pil_img)
 cvt.imwrite('2.png',img) 
+```
+
+## to_html_img_tag  
+Convert image to HTML img tag (Base64 encoding)   
+``` python
+from cvplus import cvt
+img = cvt.imread("test.jpg")
+img_tag = cvt.to_html_img_tag(img ,{'alt': 'test alt', 'title': 'test title'})
+with codecs.open("test.html", "w+", "utf8") as f:
+    f.write(f"<html>{img_tag}</html>")
+```
+
+tag  
+```
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAJ8CAIAAADh/4cWAAAgAElEQVR4AaTBAZZkx5Vl13Oe/R9B
+               :
+               :
+XHEdFRKYWYSPiIiPwHwf2saqiIOfK/kAAAAAElFTkSuQmCC
+" alt="test alt" title="test title">
 ```
