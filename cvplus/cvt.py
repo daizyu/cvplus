@@ -86,7 +86,7 @@ def imnew(w: int, h: int, d: int = 3, dtype: type = np.uint8) -> cv2.Mat:
     img : cv2.Mat
     """
     assert d in [1, 3, 4]
-    return np.zeros([h, w], dtype)
+    return np.zeros([h, w, d], dtype)
 
 
 def to_pil(img: cv2.Mat) -> Image.Image:
