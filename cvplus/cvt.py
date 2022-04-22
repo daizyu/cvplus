@@ -64,7 +64,13 @@ def imwrite(filepath: str, img: cv2.Mat) -> bool:
     return True
 
 
-def imnew(w: int, h: int, d: int = 3, dtype: type = np.uint8) -> cv2.Mat:
+def imnew(
+    w: int,
+    h: int,
+    d: int = 3,
+    bgcolor: list | tuple = [255, 255, 255],
+    dtype: type = np.uint8,
+) -> cv2.Mat:
     """
     Create new image file
 
@@ -86,7 +92,21 @@ def imnew(w: int, h: int, d: int = 3, dtype: type = np.uint8) -> cv2.Mat:
     img : cv2.Mat
     """
     assert d in [1, 3, 4]
-    return np.zeros([h, w, d], dtype)
+    if d == 1:
+        img = np.zeros([h, w], dtype)
+        img = bgcolor[0]
+    elif d == 3:
+        img = np.zeros([h, w, 3], dtype)
+        img[:, :] = bgcolor
+        print("hit")
+    elif d == 4:
+        img = np.zeros([h, w, 4], dtype)
+        bgcolor = list(bgcolor)
+        if len(bgcolor) == 3:
+            bgcolor.append(0)
+        img[:, :] = bgcolor
+
+    return img
 
 
 def to_pil(img: cv2.Mat) -> Image.Image:
