@@ -131,3 +131,5 @@ dmypy.json
 # poetry.lock
 poetry.lock
 
+# Bat
+*.bat
